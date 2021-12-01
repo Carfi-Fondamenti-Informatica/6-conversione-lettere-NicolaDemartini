@@ -1,17 +1,22 @@
-#include "lib.h"
-bool converti_carattere (char &a){
-    bool w = true;
-    if((a >= 65 && a <= 90)or(a >= 97 && a <= 122)){
-        w = true;
-        if(a >= 65 && a <= 90){
-            a=a+32;
-            return a;
-        }else{
-            a=a-32;
-            return a;
-        }
-    }else{
-        w=false;
+#include "lib.h" 
+int Verifica (char c){
+    bool risultato;
+    if(c>=65 && c<=90){
+        risultato = true;
     }
-    return w;
+    else if(c>=97 && c<=122){
+        risultato = true;
+    }
+    else{
+         risultato = false;
+    } return risultato;
+}
+
+int Conversione (char c){
+    int convertito = 0;
+    if(c>=65 && c<=90){
+        convertito = c+32;
+    } else {
+        convertito = c-32;
+    } return convertito;
 }
